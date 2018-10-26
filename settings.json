@@ -1,0 +1,4 @@
+{
+  // "python.pythonPath": "/Users/brianblosser/Sites/.virtualenvs/.wagtaildemo/bin/python",
+  "python.linting.pep8Args": ["--config", "setup.cfg",]
+}
