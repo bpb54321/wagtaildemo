@@ -9,7 +9,9 @@
 {% block body_class %}template-homepage{% endblock body_class %}
 
 {% block content %}
-    <p>Filler content</p>
+  {% for block in page.body %}
+    {% include_block block %}
+  {% endfor %}
 {% endblock content %}
 
 {% block extra_js %}

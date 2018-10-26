@@ -14,13 +14,20 @@ class CarouselItemBlock(blocks.StructBlock):
     button_link = blocks.URLBlock()
     background_image = ImageChooserBlock()
 
+    class Meta:
+        template = 'blocks/carousel_item_block.html'
+
 
 class HomePage(Page):
     body = StreamField([
         ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
-        ('carousel_items', blocks.ListBlock(CarouselItemBlock())),
+        ('carousel_items', blocks.ListBlock(
+                CarouselItemBlock(),
+                template='blocks/carousel_items.html',
+            )
+        ),
     ])
 
     content_panels = Page.content_panels + [

@@ -1,0 +1,11 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+<div class="carousel-item {{ activeclass }}">
+  <img src="https://via.placeholder.com/1920x800.png" alt="Fake image">
+  <div class="container">
+    <div class="carousel-caption text-left">
+      <h2>{{ value.heading }}</h2>
+      {{ value.text }}
+      <p><a class="btn btn-lg btn-primary" href="{{ value.button_link }}" role="button">{{ value.button_text }}</a></p>
+    </div>
+  </div>
+</div>
