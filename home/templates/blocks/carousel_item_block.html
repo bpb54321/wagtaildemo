@@ -1,6 +1,7 @@
-{% load wagtailimages_tags wagtailcore_tags %}
+{% load wagtailimages_tags wagtailcore_tags responsiveimage %}
 <div class="carousel-item {{ activeclass }}">
-  <img src="https://via.placeholder.com/1920x800.png" alt="Fake image">
+  {% comment %} <img src="https://via.placeholder.com/1920x800.png" alt="Fake image" class="d-block w-100"> {% endcomment %}
+  {% responsiveimage value.background_image width-1200 srcset="width-700 700w, width-1200 1200w" sizes="100vw" style="display: block; width: 100%; height: auto;" %}
   <div class="container">
     <div class="carousel-caption text-left">
       <h2>{{ value.heading }}</h2>
