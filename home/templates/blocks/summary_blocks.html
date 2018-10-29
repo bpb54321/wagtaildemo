@@ -1,0 +1,10 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+<div class="container">
+  <div class="row">
+    {% for summary_block in value %}
+      <div class="col-lg-4">
+        {% include_block summary_block %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

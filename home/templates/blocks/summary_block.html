@@ -1,0 +1,7 @@
+{% load wagtailimages_tags wagtailcore_tags responsiveimage %}
+<div class="summary-block" style="display: flex; flex-flow: column nowrap; align-items: center;">
+  {% responsiveimage value.thumbnail_image width-140 srcset="width-140 140w, width-280 280w" sizes="140px" style="display: block;" class="rounded-circle" %}
+  <h2>{{ value.heading }}</h2>
+  {{ value.text }}
+  <p><a class="btn btn-secondary" href="{{ value.button_link }}" role="button">{{ value.button_text }}</a></p>
+</div>
